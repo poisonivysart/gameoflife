@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <SDL2/SDL.h>
+
 #define ROWS 5
 #define COLUMNS 10
 
@@ -27,7 +29,13 @@
 int main(){
  // retutns zero on success else non-zero
     // SDL_SetMainReady();
-    
+  if (SDL_Init(SDL_INIT_EVERYTHING) < 0){
+		printf("SDL could not initialize!\n",SDL_GetError());
+		return -1;
+	}
+
+  // if game craches close the window
+  atexit(SDL_Quit);
 
   srand(time(NULL));
   begin(ROWS+2,COLUMNS+2);

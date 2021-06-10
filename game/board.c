@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "board.h"
 
 char* nextBoard(int rows, int columns, char* prevBoard){
@@ -27,6 +24,47 @@ char* nextBoard(int rows, int columns, char* prevBoard){
   return new;
 
 }
+
+void begin(int rows, int columns){
+  // gameWindow = SDL_CreateWindow("Game Of Life", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
+	// if (gameWindow == NULL)
+	// {
+	// 	gameError = "SDL Failed to create window!";
+	// 	exit(-1);
+	// }
+
+	// gameRenderer = SDL_CreateRenderer(gameWindow, -1, SDL_RENDERER_ACCELERATED);
+	// if (gameRenderer == NULL)
+	// {
+	// 	gameError = "SDL Failed to create renderer!";
+	// 	exit(-1);
+	// }
+
+  // SDL_SetRenderDrawBlendMode(gameRenderer, SDL_BLENDMODE_BLEND);
+	// gameWindowSurface = SDL_GetWindowSurface(gameWindow);
+  // SDL_GetWindowSize(gameWindow, &gameWindowWidth, &gameWindowHeight);
+
+  // gridWidth = 128;
+	// gridHeight = 72;
+
+  puts("Drawing...");
+  char *board = create(rows, columns);
+  if(board == NULL) return;
+  display(rows,columns, board);
+
+  while(1){
+    char* newBoard = nextBoard(rows, columns, board);
+    if(newBoard == NULL){
+      printf("Error with creating of a new board.\n");
+      return;
+    }
+    free(board);
+    board = newBoard;
+    display(rows, columns, board);
+    usleep(1000000);
+  }
+}
+
 
 int count(int rows, int columns, int x, int y, char* board){
   int count = 0;
@@ -62,24 +100,6 @@ void display(int rows, int columns, char* board){
 }
 
 
-void begin(int rows, int columns){
-  puts("Drawing...");
-  char *board = create(rows, columns);
-  if(board == NULL) return;
-  display(rows,columns, board);
-
-  while(1){
-    char* newBoard = nextBoard(rows, columns, board);
-    if(newBoard == NULL){
-      printf("Error with creating of a new board.\n");
-      return;
-    }
-    free(board);
-    board = newBoard;
-    display(rows, columns, board);
-    usleep(1000000);
-  }
-}
 
 
 char* create(int rows, int columns){
