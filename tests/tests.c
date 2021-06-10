@@ -59,7 +59,7 @@ void testCount(){
 
 int main(){
 
-  CU_pSuite pSuite1,pSuite2 = NULL;
+  CU_pSuite pSuite1 = NULL;
   // Initialize CUnit test registry
   if (CUE_SUCCESS != CU_initialize_registry()) return CU_get_error();
   // Add suite1 to registry
@@ -85,13 +85,13 @@ int main(){
     return CU_get_error();
   }
 // add testNextBoard to suite1
-  if ((NULL == CU_add_test(pSuite1,"\n\n……… Testing create function……..\n\n", testNextBoard))){
+  if ((NULL == CU_add_test(pSuite1,"\n\n……… Testing nextBoard function……..\n\n", testNextBoard))){
     CU_cleanup_registry();
     return CU_get_error();
   }
 
 
-  // testCount();
+  
   CU_basic_run_tests();// OUTPUT to the screen
 
   CU_cleanup_registry();//Cleaning the Registry
