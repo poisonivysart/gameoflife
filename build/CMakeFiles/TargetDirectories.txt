@@ -2,8 +2,8 @@
 /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles/test.dir
 /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles/rebuild_cache.dir
 /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles/doc_doxygen.dir
-/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles/my_test.dir
 /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles/GAMEOFLIFE.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles/my_test.dir
 /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/game/CMakeFiles/rebuild_cache.dir
 /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/game/CMakeFiles/edit_cache.dir
 /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/game/CMakeFiles/life.dir
