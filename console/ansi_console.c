@@ -9,3 +9,5 @@ void display(int rows, int columns, char* board){
     printf("\n");
   }
 }
+
+
