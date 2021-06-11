@@ -140,19 +140,6 @@ doc_doxygen/fast:
 .PHONY : doc_doxygen/fast
 
 #=============================================================================
-# Target rules for targets named my_test
-
-# Build rule for target.
-my_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_test
-.PHONY : my_test
-
-# fast build rule for target.
-my_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/build
-.PHONY : my_test/fast
-
-#=============================================================================
 # Target rules for targets named GAMEOFLIFE
 
 # Build rule for target.
@@ -164,6 +151,19 @@ GAMEOFLIFE: cmake_check_build_system
 GAMEOFLIFE/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GAMEOFLIFE.dir/build.make CMakeFiles/GAMEOFLIFE.dir/build
 .PHONY : GAMEOFLIFE/fast
+
+#=============================================================================
+# Target rules for targets named my_test
+
+# Build rule for target.
+my_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_test
+.PHONY : my_test
+
+# fast build rule for target.
+my_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/build
+.PHONY : my_test/fast
 
 #=============================================================================
 # Target rules for targets named life
