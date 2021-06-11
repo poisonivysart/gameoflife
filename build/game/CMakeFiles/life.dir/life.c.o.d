@@ -1,7 +1,7 @@
 game/CMakeFiles/life.dir/life.c.o: \
- /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/game/life.c \
+ /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/game/life.c \
  /usr/include/stdc-predef.h \
- /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/game/life.h \
+ /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/game/life.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \

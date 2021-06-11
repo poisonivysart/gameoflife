@@ -1,4 +1,4 @@
-# Install script for directory: /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/game
+# Install script for directory: /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
