@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/my_test.dir/tests/tests.c.o -o my_test  -lcunit 

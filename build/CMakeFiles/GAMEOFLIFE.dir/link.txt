@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/GAMEOFLIFE.dir/main.c.o -o GAMEOFLIFE  game/liblife.a console/libboard.a 

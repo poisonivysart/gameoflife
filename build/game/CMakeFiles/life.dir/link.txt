@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblife.a CMakeFiles/life.dir/life.c.o
+/usr/bin/ranlib liblife.a

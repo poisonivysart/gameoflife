@@ -1,0 +1,2 @@
+/usr/bin/ar qc libboard.a CMakeFiles/board.dir/ansi_console.c.o
+/usr/bin/ranlib libboard.a
