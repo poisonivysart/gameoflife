@@ -1,0 +1,171 @@
+\hypertarget{life_8h}{}\doxysection{game/life.h File Reference}
+\label{life_8h}\index{game/life.h@{game/life.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for life.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{life_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{life_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{life_8h_a2cad8b3055216adff1a64be3d66f4d5c}{begin}} (int rows, int columns)
+\begin{DoxyCompactList}\small\item\em Starts the game. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{life_8h_af29a83e7117d86a4c79303ce09743f5c}{get\+Random\+Value}} (double min, double max)
+\begin{DoxyCompactList}\small\item\em Returns a random double between min and max given by the application. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{life_8h_ac5de8bb1632100fd4893f5b44cccba20}{create\+Board}} (int rows, int columns)
+\begin{DoxyCompactList}\small\item\em Creates a board at the start. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{life_8h_af76ccdadf110d979eb30afa5854419d7}{count}} (int rows, int columns, int x, int y, char $\ast$board)
+\begin{DoxyCompactList}\small\item\em Counts the number of live cells around the current given cell. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{life_8h_a00a460809b7e3f21cac85b9437c7b27d}{new\+Board}} (int rows, int columns, char $\ast$prev\+Board)
+\begin{DoxyCompactList}\small\item\em creates a new board to fill and update with the progression from the previous board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{life_8h_afa47b5596386bb4627c11396dc296120}{is\+Not\+Empty}} (int rows, int columns, char $\ast$board)
+\begin{DoxyCompactList}\small\item\em Checks whether the board has only dead cells or there\textquotesingle{}s at least one live cell. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{life_8h_a62dc17344a34dcbdff4cbdc86985b4d8}{compare\+Boards}} (int rows, int columns, char $\ast$board, char $\ast$prev\+Board)
+\begin{DoxyCompactList}\small\item\em Compares two boards and whether they are the same or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{life_8h_ab97631da889d2eb2a169c3386de5e966}{glider}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{life_8h_a2cad8b3055216adff1a64be3d66f4d5c}\label{life_8h_a2cad8b3055216adff1a64be3d66f4d5c}} 
+\index{life.h@{life.h}!begin@{begin}}
+\index{begin@{begin}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void begin (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})}
+
+
+
+Starts the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board Starts the game \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{life_8h_a62dc17344a34dcbdff4cbdc86985b4d8}\label{life_8h_a62dc17344a34dcbdff4cbdc86985b4d8}} 
+\index{life.h@{life.h}!compareBoards@{compareBoards}}
+\index{compareBoards@{compareBoards}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{compareBoards()}{compareBoards()}}
+{\footnotesize\ttfamily int compare\+Boards (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{char $\ast$}]{board,  }\item[{char $\ast$}]{prev\+Board }\end{DoxyParamCaption})}
+
+
+
+Compares two boards and whether they are the same or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+{\em board} & The board of the game \\
+\hline
+{\em prev\+Board} & The previous board of the game, before updates Compares 2 tables, previous and current and if they are the same returns 0 to stop the while loop in begin function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{life_8h_af76ccdadf110d979eb30afa5854419d7}\label{life_8h_af76ccdadf110d979eb30afa5854419d7}} 
+\index{life.h@{life.h}!count@{count}}
+\index{count@{count}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily int count (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{char $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Counts the number of live cells around the current given cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+{\em x} & The x coordinate on the table \\
+\hline
+{\em y} & The y coordinate on the table \\
+\hline
+{\em board} & The board itself Counts the number of live cells around the current cell\\
+\hline
+\end{DoxyParams}
+Counts the number of live cells around the current given cell. \mbox{\Hypertarget{life_8h_ac5de8bb1632100fd4893f5b44cccba20}\label{life_8h_ac5de8bb1632100fd4893f5b44cccba20}} 
+\index{life.h@{life.h}!createBoard@{createBoard}}
+\index{createBoard@{createBoard}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{createBoard()}{createBoard()}}
+{\footnotesize\ttfamily char$\ast$ create\+Board (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})}
+
+
+
+Creates a board at the start. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{life_8h_af29a83e7117d86a4c79303ce09743f5c}\label{life_8h_af29a83e7117d86a4c79303ce09743f5c}} 
+\index{life.h@{life.h}!getRandomValue@{getRandomValue}}
+\index{getRandomValue@{getRandomValue}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{getRandomValue()}{getRandomValue()}}
+{\footnotesize\ttfamily double get\+Random\+Value (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max }\end{DoxyParamCaption})}
+
+
+
+Returns a random double between min and max given by the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Lower bound of the interval \\
+\hline
+{\em max} & Upper bound of the interval To randomize the placement of the hashes on the initial table, so that the game of life could start A standard random value expression was used, nothing too special \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{life_8h_ab97631da889d2eb2a169c3386de5e966}\label{life_8h_ab97631da889d2eb2a169c3386de5e966}} 
+\index{life.h@{life.h}!glider@{glider}}
+\index{glider@{glider}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{glider()}{glider()}}
+{\footnotesize\ttfamily void glider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function to draw an interesting pattern on the board, namely a glider animation decending from top left to bottom right \mbox{\Hypertarget{life_8h_afa47b5596386bb4627c11396dc296120}\label{life_8h_afa47b5596386bb4627c11396dc296120}} 
+\index{life.h@{life.h}!isNotEmpty@{isNotEmpty}}
+\index{isNotEmpty@{isNotEmpty}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{isNotEmpty()}{isNotEmpty()}}
+{\footnotesize\ttfamily int is\+Not\+Empty (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{char $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Checks whether the board has only dead cells or there\textquotesingle{}s at least one live cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+{\em board} & The board of the game A function to check whether the table is filled with only dead cells or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{life_8h_a00a460809b7e3f21cac85b9437c7b27d}\label{life_8h_a00a460809b7e3f21cac85b9437c7b27d}} 
+\index{life.h@{life.h}!newBoard@{newBoard}}
+\index{newBoard@{newBoard}!life.h@{life.h}}
+\doxysubsubsection{\texorpdfstring{newBoard()}{newBoard()}}
+{\footnotesize\ttfamily char$\ast$ new\+Board (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{char $\ast$}]{prev\+Board }\end{DoxyParamCaption})}
+
+
+
+creates a new board to fill and update with the progression from the previous board 
+
