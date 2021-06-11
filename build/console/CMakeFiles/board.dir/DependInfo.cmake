@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/console/ansi_console.c" "console/CMakeFiles/board.dir/ansi_console.c.o" "gcc" "console/CMakeFiles/board.dir/ansi_console.c.o.d"
+  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/console/ansi_console.c" "console/CMakeFiles/board.dir/ansi_console.c.o" "gcc" "console/CMakeFiles/board.dir/ansi_console.c.o.d"
   )
 
 # Targets to which this target links.

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/game/life.c" "game/CMakeFiles/life.dir/life.c.o" "gcc" "game/CMakeFiles/life.dir/life.c.o.d"
+  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/game/life.c" "game/CMakeFiles/life.dir/life.c.o" "gcc" "game/CMakeFiles/life.dir/life.c.o.d"
   )
 
 # Targets to which this target links.

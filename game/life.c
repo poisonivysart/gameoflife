@@ -48,7 +48,7 @@ int isNotEmpty(int rows, int columns,char* board){
 
 // we compare 2 tables, previous and current and if they are the same
 // we are gonna return 0 to stop the while loop in begin function
-compareBoards(int rows,int columns,char* board, char* prevBoard){
+int compareBoards(int rows,int columns,char* board, char* prevBoard){
   // in the first iteration the prevBoard will be null and we don't want it
   // to mess our code. So we have this condition
   if(prevBoard == NULL){
