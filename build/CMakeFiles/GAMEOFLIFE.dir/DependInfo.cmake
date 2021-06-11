@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/main.c" "CMakeFiles/GAMEOFLIFE.dir/main.c.o" "gcc" "CMakeFiles/GAMEOFLIFE.dir/main.c.o.d"
+  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/main.c" "CMakeFiles/GAMEOFLIFE.dir/main.c.o" "gcc" "CMakeFiles/GAMEOFLIFE.dir/main.c.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/game/CMakeFiles/life.dir/DependInfo.cmake"
-  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console/CMakeFiles/board.dir/DependInfo.cmake"
+  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/game/CMakeFiles/life.dir/DependInfo.cmake"
+  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console/CMakeFiles/board.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

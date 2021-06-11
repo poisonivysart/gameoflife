@@ -53,10 +53,10 @@ RM = /snap/cmake/876/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife
+CMAKE_SOURCE_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build
+CMAKE_BINARY_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build
 
 # Include any dependencies generated for this target.
 include console/CMakeFiles/board.dir/depend.make
@@ -72,16 +72,16 @@ include console/CMakeFiles/board.dir/flags.make
 console/CMakeFiles/board.dir/ansi_console.c.o: console/CMakeFiles/board.dir/flags.make
 console/CMakeFiles/board.dir/ansi_console.c.o: ../console/ansi_console.c
 console/CMakeFiles/board.dir/ansi_console.c.o: console/CMakeFiles/board.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object console/CMakeFiles/board.dir/ansi_console.c.o"
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT console/CMakeFiles/board.dir/ansi_console.c.o -MF CMakeFiles/board.dir/ansi_console.c.o.d -o CMakeFiles/board.dir/ansi_console.c.o -c /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/console/ansi_console.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object console/CMakeFiles/board.dir/ansi_console.c.o"
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT console/CMakeFiles/board.dir/ansi_console.c.o -MF CMakeFiles/board.dir/ansi_console.c.o.d -o CMakeFiles/board.dir/ansi_console.c.o -c /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/console/ansi_console.c
 
 console/CMakeFiles/board.dir/ansi_console.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/board.dir/ansi_console.c.i"
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/console/ansi_console.c > CMakeFiles/board.dir/ansi_console.c.i
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/console/ansi_console.c > CMakeFiles/board.dir/ansi_console.c.i
 
 console/CMakeFiles/board.dir/ansi_console.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/board.dir/ansi_console.c.s"
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/console/ansi_console.c -o CMakeFiles/board.dir/ansi_console.c.s
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/console/ansi_console.c -o CMakeFiles/board.dir/ansi_console.c.s
 
 # Object files for target board
 board_OBJECTS = \
@@ -93,19 +93,19 @@ board_EXTERNAL_OBJECTS =
 console/libboard.a: console/CMakeFiles/board.dir/ansi_console.c.o
 console/libboard.a: console/CMakeFiles/board.dir/build.make
 console/libboard.a: console/CMakeFiles/board.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libboard.a"
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console && $(CMAKE_COMMAND) -P CMakeFiles/board.dir/cmake_clean_target.cmake
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/board.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libboard.a"
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console && $(CMAKE_COMMAND) -P CMakeFiles/board.dir/cmake_clean_target.cmake
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/board.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 console/CMakeFiles/board.dir/build: console/libboard.a
 .PHONY : console/CMakeFiles/board.dir/build
 
 console/CMakeFiles/board.dir/clean:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console && $(CMAKE_COMMAND) -P CMakeFiles/board.dir/cmake_clean.cmake
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console && $(CMAKE_COMMAND) -P CMakeFiles/board.dir/cmake_clean.cmake
 .PHONY : console/CMakeFiles/board.dir/clean
 
 console/CMakeFiles/board.dir/depend:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/console /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console/CMakeFiles/board.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/console /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console/CMakeFiles/board.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : console/CMakeFiles/board.dir/depend
 

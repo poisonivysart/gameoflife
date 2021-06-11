@@ -1,7 +1,7 @@
 console/CMakeFiles/board.dir/ansi_console.c.o: \
- /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/console/ansi_console.c \
+ /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/console/ansi_console.c \
  /usr/include/stdc-predef.h \
- /home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/console/board_drawer.h \
+ /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/console/board_drawer.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \

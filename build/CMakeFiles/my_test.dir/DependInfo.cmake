@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/tests/tests.c" "CMakeFiles/my_test.dir/tests/tests.c.o" "gcc" "CMakeFiles/my_test.dir/tests/tests.c.o.d"
+  "/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/tests/tests.c" "CMakeFiles/my_test.dir/tests/tests.c.o" "gcc" "CMakeFiles/my_test.dir/tests/tests.c.o.d"
   )
 
 # Targets to which this target links.
