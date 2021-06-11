@@ -5,3 +5,7 @@ Basic instructions:
 3. ./GAMEOFLIFE (also in build directory)
 4. make test (if u want to check out the test runnning)
 5. make clean
+
+To check the Doxygen documentation
+6. make api-docs
+7. Open the api-docs folder -> html folder -> index.html and voila!
