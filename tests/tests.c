@@ -18,30 +18,45 @@ int clean_suite(void) { return 0; }
 
 int count(int rows, int columns, int x, int y, char* board);
 char* nextBoard(int rows, int columns, char* prevBoard);
-char* create(int rows, int columns);
-double getRandomRange(double min, double max);
+char* createBoard(int rows, int columns);
+double getRandomValue(double min, double max);
 void display(int rows, int columns, char* board);
+int compareBoards(int rows,int columns,char* board, char* prevBoard);
+int isNotEmpty(int rows, int columns,char* board);
 
 void testNextBoard(){
   // nextBoard also shouldn't return a NULL
-  char* prevBoard = create(ROWS, COLUMNS);
+  char* prevBoard = createBoard(ROWS, COLUMNS);
   CU_ASSERT(nextBoard(ROWS, COLUMNS, prevBoard) != NULL);
 }
 
 void testCreate(){
   // here we will check the creation of the game of life board. Let's see if it returns a real pointer or NULL.
-  CU_ASSERT(create(ROWS, COLUMNS) != NULL);
+  CU_ASSERT(createBoard(ROWS, COLUMNS) != NULL);
 }
 
-void testGetRandomRange(){
+void testIsNotEmpty(){
+  char* board1 = createBoard(ROWS, COLUMNS);
+  CU_ASSERT(1==isNotEmpty(ROWS, COLUMNS, board1));
+  char* board2 = (char*)calloc(ROWS*COLUMNS, sizeof(char));
+  CU_ASSERT(0 == isNotEmpty(ROWS,COLUMNS,board2));
+}
+
+void testCompareBoards(){
+  char* board1 = (char*)calloc(ROWS*COLUMNS, sizeof(char));
+  char* board2 = (char*)calloc(ROWS*COLUMNS, sizeof(char));
+  CU_ASSERT(compareBoards(ROWS,COLUMNS,board1, board2) == 0);
+}
+
+void testGetRandomValue(){
   // Here we need to check the values that the function returns, they should be truthful
   // these should be between 0 and 1
   // We have many tests to test the randomizer
-  CU_ASSERT(getRandomRange(0.0,1.0) >= 0.0 && getRandomRange(0.0,1.0) <= 1.0);
-  CU_ASSERT(getRandomRange(0.0,1.0) >= 0.0 && getRandomRange(0.0,1.0) <= 1.0);
-  CU_ASSERT(getRandomRange(0.0,1.0) >= 0.0 && getRandomRange(0.0,1.0) <= 1.0);
-  CU_ASSERT(getRandomRange(0.0,1.0) >= 0.0 && getRandomRange(0.0,1.0) <= 1.0);
-  CU_ASSERT(getRandomRange(0.0,1.0) >= 0.0 && getRandomRange(0.0,1.0) <= 1.0);
+  CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
+  CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
+  CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
+  CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
+  CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
 }
 
 void testCount(){
@@ -75,8 +90,8 @@ int main(){
     CU_cleanup_registry();
     return CU_get_error();
   }
-  // add testGetRandomRange to suite1
-  if ((NULL == CU_add_test(pSuite1,"\n\n……… Testing getRandomRange function……..\n\n", testGetRandomRange))){
+  // add testgetRandomValue to suite1
+  if ((NULL == CU_add_test(pSuite1,"\n\n……… Testing getRandomValue function……..\n\n", testGetRandomValue))){
     CU_cleanup_registry();
     return CU_get_error();
   }
@@ -90,7 +105,16 @@ int main(){
     CU_cleanup_registry();
     return CU_get_error();
   }
-
+// add testIsNotEmpty to suite1
+  if ((NULL == CU_add_test(pSuite1,"\n\n……… Testing isNotEmpty function……..\n\n", testIsNotEmpty))){
+    CU_cleanup_registry();
+    return CU_get_error();
+  }
+// add testCompareBoards to suite1
+  if ((NULL == CU_add_test(pSuite1,"\n\n……… Testing compareBoards function……..\n\n", testCompareBoards))){
+    CU_cleanup_registry();
+    return CU_get_error();
+  }
 
   
   CU_basic_run_tests();// OUTPUT to the screen
@@ -102,80 +126,148 @@ int main(){
   return 0;
 }
 
-void display(int rows, int columns, char* board){
-  // printf("\033[H\033\[J"); //to clean the screen
-  printf("\n\n\n\n\n");
+char* nextBoard(int rows, int columns, char* prevBoard){
+  // standard creation of the new board and the filling it with cells
+  char* newBoard = (char*)calloc(rows*columns, sizeof(char));
+  if(newBoard == NULL) return NULL;
+
   for(int i = 1; i < rows-1; i++){
     for(int j = 1; j < columns-1; j++){
-      printf("%c ", *(board +i*columns + j));
+      // we assign a cell to be dead or alive in accordance with its surrounding cells    
+      int c = count(rows, columns, i, j, prevBoard);
+      //  our original cell
+      char cell = *(prevBoard + i*columns+j);
+      // if the cell itself is alive, then we subtract one to not mess with out calculation
+      if(cell == '#') c--; //we dont count ourselves
+      // by default we assign the original cell to the new one
+      *(newBoard + i*columns+j) = cell;
+
+      // here we start checking how many surrounding cells are alive
+      // if it's 2 or 3 and the cell is alive itself, it stays alive
+      if((c == 2 || c == 3) && cell == '#'){
+        *(newBoard + i*columns+j) = '#';
+      // if it's exactly 3 and the cell is dead, it becomes alive
+      }else if(c == 3 && cell == '.'){
+        *(newBoard + i*columns+j) = '#';
+      // in all other cases it is dead or becomes dead
+      }else{
+        *(newBoard + i*columns+j) = '.';
+      }
     }
-    printf("\n");
+  }
+  return newBoard;
+
+}
+
+
+
+
+
+void begin(int rows, int columns){
+
+  printf("Starting the Game of Life\n");
+
+  // we create a new board with random dead and alive cells
+  char *board = createBoard(rows, columns); 
+  if(board == NULL) return; // check if the board is created or not
+  display(rows,columns, board); // display the initial board
+
+  // we are storing the previous board here to compare the new board with
+  char* prevBoard = (char*)calloc(rows*columns, sizeof(char));
+
+  // while all the cells are not dead and the table is not repeated in every iterations (where the progressions stops)
+  // execute the loop
+  while(isNotEmpty(rows,columns, board) && compareBoards(rows,columns,board, prevBoard)){
+    char* newBoard = nextBoard(rows, columns, board);
+    if(newBoard == NULL){
+      printf("Error with creating of a new board.\n");
+      return;
+    }
+    // setting the prevBoard pointer to the old one
+    prevBoard = board;
+    // freeing the old board, nno need for that memory anymore
+    free(board);
+    // setting the board pointer to point to the newly create board
+    board = newBoard;
+    // displaying the updated board
+    display(rows, columns, board); // show the updated board
+    // intervals between tables to create a smooth watching experience of the cell progression
+    usleep(100000); 
   }
 }
 
+// count the number of live cells around the current cell
+int count(int rows, int columns, int x, int y, char* board){
+  int counter = 0; // a standard counter
+  int cell = x*columns  + y; // we locate and take our current cell
+  // the loop with range [-1,1] to find the cells around it, 8 overall
+  for(int i =  -1; i<= 1;i++){
+    for(int j =  -1; j<= 1;j++){
+      char c = *(board + cell +(i*columns) + j);
+      if(c == '#') counter++; // if the cell is alive, then add to the counter
 
-double getRandomRange(double min, double max){
-  printf("%f\n",((double)rand()/RAND_MAX)*(max-min)+min);
+    }
+  }
+  return counter;
+}
+
+double getRandomValue(double min, double max){
   return ((double)rand()/RAND_MAX)*(max-min)+min;
 }
 
-char* create(int rows, int columns){
+
+// initial creation of a board with random dead and live cells
+char* createBoard(int rows, int columns){
   char* board = (char*)calloc(rows*columns, sizeof(char));
   if(board== NULL){
-    printf("No memory exists\n");
+    printf("Memory allocation error\n");
     return NULL;
   }
   for(int i = 1; i < rows-1; i++){
     for(int j =1; j < columns-1; j++){
-      if(getRandomRange(0.0,1.0) <= 0.35){
-        *(board +i*columns + j) = '#';
-      }else{
-        *(board +i*columns + j) = '.';
-      }
-      
+      // checks if the randm value is below 4, basically 40%, then the cell is alive
+      if(getRandomValue(0.0,10.0) <= 4) *(board +i*columns + j) = '#';
+      // otherwise the cell is dead, most of the time
+      else *(board +i*columns + j) = '.'; 
     }
   }
   return board;
 }
 
-
-int count(int rows, int columns, int x, int y, char* board){
-  int count = 0;
-  int pivot = x*columns  + y; //?
-
-  for(int i =  -1; i<= 1;i++){
-    for(int j =  -1; j<= 1;j++){
-      
-      char c = *(board + pivot +(i*columns) + j);
-
-      if(c == '#') count++;
-
-    }
+int compareBoards(int rows,int columns,char* board, char* prevBoard){
+  if(prevBoard == NULL){
+    return 1;
   }
-  return count-1; // we shouldn't consider our own element
-}
-
-char* nextBoard(int rows, int columns, char* prevBoard){
-  char* new = (char*)calloc(rows*columns, sizeof(char));
-  if(new == NULL) return NULL;
-
   for(int i = 1; i < rows-1; i++){
     for(int j = 1; j < columns-1; j++){
-      
-      int c = count(rows, columns, i, j, prevBoard);
-      char cell = *(prevBoard + i*columns+j);
-      if(cell == '#') c--; //we dont count ourselves
-      *(new + i*columns+j) = cell;
-
-      if((c == 2 || c == 3) && cell == '#'){
-        *(new + i*columns+j) = '#';
-      }else if(c == 3 && cell == '.'){
-        *(new + i*columns+j) = '#';
-      }else{
-        *(new + i*columns+j) = '.';
+      if(*(board +i*columns + j) != *(prevBoard +i*columns + j)){ 
+        return 1;
       }
     }
   }
-  return new;
+  printf("The cells in the table liked their positions and wouldn't change anymore. The Game of Life has come to an end!\n");
+  return 0; 
+  
+}
 
+int isNotEmpty(int rows, int columns,char* board){
+   for(int i = 1; i < rows-1; i++){
+    for(int j = 1; j < columns-1; j++){
+        if(*(board +i*columns + j) == '#'){ 
+          return 1;
+        }
+    }
+  }
+  printf("After a huge war, all cells are dead. The Game of Life has come to an end!\n");
+  return 0; 
+}
+
+void display(int rows, int columns, char* board){
+  printf("\n\n\n");
+  for(int i = 1; i < rows-1; i++){
+    for(int j = 1; j < columns-1; j++){
+        printf("\x1b[1;32m %c ", *(board +i*columns + j));
+    }
+    printf("\n");
+  }
 }

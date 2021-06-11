@@ -1,4 +1,4 @@
-# Install script for directory: /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife
+# Install script for directory: /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/game/cmake_install.cmake")
+  include("/home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/game/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/console/cmake_install.cmake")
+  include("/home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/console/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

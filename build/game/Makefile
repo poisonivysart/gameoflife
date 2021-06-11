@@ -57,10 +57,10 @@ RM = /snap/cmake/876/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife
+CMAKE_SOURCE_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build
+CMAKE_BINARY_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/game//CMakeFiles/progress.marks
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles 0
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/CMakeFiles /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/game//CMakeFiles/progress.marks
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/clean
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 game/CMakeFiles/life.dir/rule:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/life.dir/rule
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/life.dir/rule
 .PHONY : game/CMakeFiles/life.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ life: game/CMakeFiles/life.dir/rule
 
 # fast build rule for target.
 life/fast:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/build
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/build
 .PHONY : life/fast
 
 life.o: life.c.o
@@ -145,7 +145,7 @@ life.o: life.c.o
 
 # target to build an object file
 life.c.o:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/life.c.o
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/life.c.o
 .PHONY : life.c.o
 
 life.i: life.c.i
@@ -153,7 +153,7 @@ life.i: life.c.i
 
 # target to preprocess a source file
 life.c.i:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/life.c.i
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/life.c.i
 .PHONY : life.c.i
 
 life.s: life.c.s
@@ -161,7 +161,7 @@ life.s: life.c.s
 
 # target to generate assembly for a file
 life.c.s:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/life.c.s
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(MAKE) $(MAKESILENT) -f game/CMakeFiles/life.dir/build.make game/CMakeFiles/life.dir/life.c.s
 .PHONY : life.c.s
 
 # Help Target
@@ -188,6 +188,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

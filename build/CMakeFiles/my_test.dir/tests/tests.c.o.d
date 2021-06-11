@@ -1,5 +1,5 @@
 CMakeFiles/my_test.dir/tests/tests.c.o: \
- /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/tests/tests.c \
+ /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/tests/tests.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \

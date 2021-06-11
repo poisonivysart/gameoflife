@@ -53,10 +53,10 @@ RM = /snap/cmake/876/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife
+CMAKE_SOURCE_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build
+CMAKE_BINARY_DIR = /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build
 
 # Utility rule file for doc_doxygen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/doc_doxygen.dir/compiler_depend.make
 include CMakeFiles/doc_doxygen.dir/progress.make
 
 CMakeFiles/doc_doxygen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
-	/usr/bin/doxygen /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/Doxyfile
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
+	/usr/bin/doxygen /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/Doxyfile
 
 doc_doxygen: CMakeFiles/doc_doxygen
 doc_doxygen: CMakeFiles/doc_doxygen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/doc_doxygen.dir/clean:
 .PHONY : CMakeFiles/doc_doxygen.dir/clean
 
 CMakeFiles/doc_doxygen.dir/depend:
-	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build /home/poisonivysart/Documents/L2/S2/CS_DevTech/GameOfLife/build/CMakeFiles/doc_doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build /home/poisonivysart/Documents/L2/S2/CS_DevTech/gameoflife/build/CMakeFiles/doc_doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doc_doxygen.dir/depend
 
