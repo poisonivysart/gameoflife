@@ -1,0 +1,48 @@
+\hypertarget{CMakeLists_8txt}{}\doxysection{C\+Make\+Lists.\+txt File Reference}
+\label{CMakeLists_8txt}\index{CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CMakeLists_8txt_a534544586d01bce5b78be185adc63ffb}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+20.\+3) project(G\+A\+M\+E\+O\+F\+L\+I\+FE) add\+\_\+executable(\$
+\item 
+\mbox{\hyperlink{tests_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} c \mbox{\hyperlink{CMakeLists_8txt_a95eebb958581bce8ce1486dc2d56fa01}{add\+\_\+subdirectory}} (game) target\+\_\+link\+\_\+libraries(\$
+\item 
+life \mbox{\hyperlink{CMakeLists_8txt_a6db00a7c41e23983454e2cd1015bc259}{add\+\_\+subdirectory}} (console) target\+\_\+link\+\_\+libraries(\$
+\item 
+board \mbox{\hyperlink{CMakeLists_8txt_ab0c09089f7219e1b82393a2ba4341ab9}{enable\+\_\+testing}} () add\+\_\+executable(my\+\_\+test tests/tests.\+c) target\+\_\+link\+\_\+libraries(my\+\_\+test cunit) add\+\_\+test(N\+A\+ME my\+\_\+test C\+O\+M\+M\+A\+ND my\+\_\+test) option(B\+U\+I\+L\+D\+\_\+\+D\+OC \char`\"{}Build documentation\char`\"{} ON) find\+\_\+package(Doxygen) if(D\+O\+X\+Y\+G\+E\+N\+\_\+\+F\+O\+U\+ND) \mbox{\hyperlink{CMakeLists_8txt_ac7a22c532355f8412252dcf531c59655}{set}}(D\+O\+X\+Y\+G\+E\+N\+\_\+\+IN \$
+\item 
+Doxyfile \mbox{\hyperlink{CMakeLists_8txt_ac7a22c532355f8412252dcf531c59655}{set}} (D\+O\+X\+Y\+G\+E\+N\+\_\+\+O\+UT \$\{C\+M\+A\+K\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/Doxyfile) configure\+\_\+file(\$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CMakeLists_8txt_a6db00a7c41e23983454e2cd1015bc259}\label{CMakeLists_8txt_a6db00a7c41e23983454e2cd1015bc259}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!add\_subdirectory@{add\_subdirectory}}
+\index{add\_subdirectory@{add\_subdirectory}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{add\_subdirectory()}{add\_subdirectory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily life add\+\_\+subdirectory (\begin{DoxyParamCaption}\item[{console}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CMakeLists_8txt_a95eebb958581bce8ce1486dc2d56fa01}\label{CMakeLists_8txt_a95eebb958581bce8ce1486dc2d56fa01}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!add\_subdirectory@{add\_subdirectory}}
+\index{add\_subdirectory@{add\_subdirectory}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{add\_subdirectory()}{add\_subdirectory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tests_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} c add\+\_\+subdirectory (\begin{DoxyParamCaption}\item[{game}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CMakeLists_8txt_a534544586d01bce5b78be185adc63ffb}\label{CMakeLists_8txt_a534544586d01bce5b78be185adc63ffb}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.\+20.}]{3 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CMakeLists_8txt_ab0c09089f7219e1b82393a2ba4341ab9}\label{CMakeLists_8txt_ab0c09089f7219e1b82393a2ba4341ab9}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!enable\_testing@{enable\_testing}}
+\index{enable\_testing@{enable\_testing}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{enable\_testing()}{enable\_testing()}}
+{\footnotesize\ttfamily board enable\+\_\+testing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CMakeLists_8txt_ac7a22c532355f8412252dcf531c59655}\label{CMakeLists_8txt_ac7a22c532355f8412252dcf531c59655}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!set@{set}}
+\index{set@{set}!CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily Doxyfile set (\begin{DoxyParamCaption}\item[{D\+O\+X\+Y\+G\+E\+N\+\_\+\+O\+UT \$\{C\+M\+A\+K\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/}]{Doxyfile }\end{DoxyParamCaption})}
+

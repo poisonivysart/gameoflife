@@ -9,13 +9,16 @@
 #include <CUnit/Basic.h>	  // Basic interface with non-interactive output to stdout.
 #include <CUnit/Console.h>	// Interactive console interface.
 
-// I define the default rows and columns here
+/// Defines the default rows for testing environment
 #define ROWS 7
+/// Defines the default columns for testing environment
 #define COLUMNS 8
 
+/// Initializing the test suit and the cleaner functions
 int init_suite(void) { return 0; }
 int clean_suite(void) { return 0; }
 
+/// The functions seen in life.h
 int count(int rows, int columns, int x, int y, char* board);
 char* nextBoard(int rows, int columns, char* prevBoard);
 char* createBoard(int rows, int columns);
@@ -24,34 +27,53 @@ void display(int rows, int columns, char* board);
 int compareBoards(int rows,int columns,char* board, char* prevBoard);
 int isNotEmpty(int rows, int columns,char* board);
 
+
+/**
+ * Testing the nextBoard function and whether it creates a new board out of the previous one or just returns  a NULL pointer
+ */
 void testNextBoard(){
   // nextBoard also shouldn't return a NULL
   char* prevBoard = createBoard(ROWS, COLUMNS);
   CU_ASSERT(nextBoard(ROWS, COLUMNS, prevBoard) != NULL);
 }
 
+
+/**
+ * Testing the createBoard function and whether it creates a new board or just returns  a NULL pointer
+ */
 void testCreate(){
   // here we will check the creation of the game of life board. Let's see if it returns a real pointer or NULL.
   CU_ASSERT(createBoard(ROWS, COLUMNS) != NULL);
 }
 
+/**
+ * Testing isNotEmpty and whether or not it returns truthful values for both full and empty boards
+ */
+
 void testIsNotEmpty(){
+  // creating 2 boards one filled and one is empty
   char* board1 = createBoard(ROWS, COLUMNS);
   CU_ASSERT(1==isNotEmpty(ROWS, COLUMNS, board1));
   char* board2 = (char*)calloc(ROWS*COLUMNS, sizeof(char));
   CU_ASSERT(0 == isNotEmpty(ROWS,COLUMNS,board2));
 }
 
+
+/**
+ * Testing compareBoards and whether it truthfully compares 2 empty boards or not
+ */
 void testCompareBoards(){
+  // creating two identical boards so that we can check and they won't be the same
   char* board1 = (char*)calloc(ROWS*COLUMNS, sizeof(char));
   char* board2 = (char*)calloc(ROWS*COLUMNS, sizeof(char));
   CU_ASSERT(compareBoards(ROWS,COLUMNS,board1, board2) == 0);
 }
 
+
+/**
+ * Here we need to check the values that the function returns, they should be truthful these should be between 0 and 1 We have many tests to test the randomizer
+ */
 void testGetRandomValue(){
-  // Here we need to check the values that the function returns, they should be truthful
-  // these should be between 0 and 1
-  // We have many tests to test the randomizer
   CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
   CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
   CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
@@ -59,6 +81,10 @@ void testGetRandomValue(){
   CU_ASSERT(getRandomValue(0.0,1.0) >= 0.0 && getRandomValue(0.0,1.0) <= 1.0);
 }
 
+
+/**
+ * Testing count and whether it returns truthful values for board full of living cells
+ */
 void testCount(){
   //basic setup for the test
   char* board = (char*)calloc(ROWS*COLUMNS, sizeof(char));
@@ -73,6 +99,10 @@ void testCount(){
   
 }
 
+
+/**
+ * The main function which triggers the testing
+ */
 int main(){
 
   CU_pSuite pSuite1 = NULL;
@@ -116,18 +146,16 @@ int main(){
     return CU_get_error();
   }
 
-  
   CU_basic_run_tests();// OUTPUT to the screen
-
   CU_cleanup_registry();//Cleaning the Registry
   return CU_get_error();
-
 
   return 0;
 }
 
+// Here are the functions that we use in the game
+
 char* nextBoard(int rows, int columns, char* prevBoard){
-  // standard creation of the new board and the filling it with cells
   char* newBoard = (char*)calloc(rows*columns, sizeof(char));
   if(newBoard == NULL) return NULL;
 
@@ -158,10 +186,6 @@ char* nextBoard(int rows, int columns, char* prevBoard){
   return newBoard;
 
 }
-
-
-
-
 
 void begin(int rows, int columns){
 

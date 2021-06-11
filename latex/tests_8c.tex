@@ -1,0 +1,274 @@
+\hypertarget{tests_8c}{}\doxysection{tests/tests.c File Reference}
+\label{tests_8c}\index{tests/tests.c@{tests/tests.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+C\+Unit.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+C\+U\+Error.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+Test\+D\+B.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+Test\+Run.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+Automated.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+Basic.\+h$>$}\newline
+{\ttfamily \#include $<$C\+Unit/\+Console.\+h$>$}\newline
+Include dependency graph for tests.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tests_8c_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}~7
+\begin{DoxyCompactList}\small\item\em Defines the default rows for testing environment. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tests_8c_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}}~8
+\begin{DoxyCompactList}\small\item\em Defines the default columns for testing environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tests_8c_a11244ab0910e8dbcdf132f10630dea91}{init\+\_\+suite}} (void)
+\begin{DoxyCompactList}\small\item\em Initializing the test suit and the cleaner functions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tests_8c_a1277ae7ecbaaad1479cfac38aaa7891d}{clean\+\_\+suite}} (void)
+\item 
+int \mbox{\hyperlink{tests_8c_af76ccdadf110d979eb30afa5854419d7}{count}} (int rows, int columns, int x, int y, char $\ast$board)
+\begin{DoxyCompactList}\small\item\em The functions seen in \mbox{\hyperlink{life_8h}{life.\+h}}. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{tests_8c_a441738d0fb472e514d9baa16548c83e4}{next\+Board}} (int rows, int columns, char $\ast$prev\+Board)
+\item 
+char $\ast$ \mbox{\hyperlink{tests_8c_ac5de8bb1632100fd4893f5b44cccba20}{create\+Board}} (int rows, int columns)
+\begin{DoxyCompactList}\small\item\em Creates a board at the start. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{tests_8c_af29a83e7117d86a4c79303ce09743f5c}{get\+Random\+Value}} (double min, double max)
+\begin{DoxyCompactList}\small\item\em Returns a random double between min and max given by the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tests_8c_a00e65ebfa112557b2ad3cf7c39c7cede}{display}} (int rows, int columns, char $\ast$board)
+\begin{DoxyCompactList}\small\item\em Displays the board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tests_8c_a62dc17344a34dcbdff4cbdc86985b4d8}{compare\+Boards}} (int rows, int columns, char $\ast$board, char $\ast$prev\+Board)
+\begin{DoxyCompactList}\small\item\em Compares two boards and whether they are the same or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tests_8c_afa47b5596386bb4627c11396dc296120}{is\+Not\+Empty}} (int rows, int columns, char $\ast$board)
+\begin{DoxyCompactList}\small\item\em Checks whether the board has only dead cells or there\textquotesingle{}s at least one live cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tests_8c_afd292d326502c8a486b6eafb6111a814}{test\+Next\+Board}} ()
+\item 
+void \mbox{\hyperlink{tests_8c_a0dc4c4586e1a48d47ba2b95f5ecd771e}{test\+Create}} ()
+\item 
+void \mbox{\hyperlink{tests_8c_a8c2d85b1dc5424545f9f4cd750cecb94}{test\+Is\+Not\+Empty}} ()
+\item 
+void \mbox{\hyperlink{tests_8c_a190e9cf236c0b72ee9025ed06030b101}{test\+Compare\+Boards}} ()
+\item 
+void \mbox{\hyperlink{tests_8c_a47157631eff227b44fb7bb87fb2de2df}{test\+Get\+Random\+Value}} ()
+\item 
+void \mbox{\hyperlink{tests_8c_abaa94e14a64470135cecf54483e300e0}{test\+Count}} ()
+\item 
+int \mbox{\hyperlink{tests_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+void \mbox{\hyperlink{tests_8c_a2cad8b3055216adff1a64be3d66f4d5c}{begin}} (int rows, int columns)
+\begin{DoxyCompactList}\small\item\em Starts the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests_8c_a06c6c391fc11d106e9909f0401b255b1}\label{tests_8c_a06c6c391fc11d106e9909f0401b255b1}} 
+\index{tests.c@{tests.c}!COLUMNS@{COLUMNS}}
+\index{COLUMNS@{COLUMNS}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{COLUMNS}{COLUMNS}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+NS~8}
+
+
+
+Defines the default columns for testing environment. 
+
+\mbox{\Hypertarget{tests_8c_a3cfd3aa62338d12609f6d65bce97e9cd}\label{tests_8c_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{tests.c@{tests.c}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~7}
+
+
+
+Defines the default rows for testing environment. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tests_8c_a2cad8b3055216adff1a64be3d66f4d5c}\label{tests_8c_a2cad8b3055216adff1a64be3d66f4d5c}} 
+\index{tests.c@{tests.c}!begin@{begin}}
+\index{begin@{begin}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void begin (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})}
+
+
+
+Starts the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board Starts the game \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tests_8c_a1277ae7ecbaaad1479cfac38aaa7891d}\label{tests_8c_a1277ae7ecbaaad1479cfac38aaa7891d}} 
+\index{tests.c@{tests.c}!clean\_suite@{clean\_suite}}
+\index{clean\_suite@{clean\_suite}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{clean\_suite()}{clean\_suite()}}
+{\footnotesize\ttfamily int clean\+\_\+suite (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tests_8c_a62dc17344a34dcbdff4cbdc86985b4d8}\label{tests_8c_a62dc17344a34dcbdff4cbdc86985b4d8}} 
+\index{tests.c@{tests.c}!compareBoards@{compareBoards}}
+\index{compareBoards@{compareBoards}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{compareBoards()}{compareBoards()}}
+{\footnotesize\ttfamily int compare\+Boards (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{char $\ast$}]{board,  }\item[{char $\ast$}]{prev\+Board }\end{DoxyParamCaption})}
+
+
+
+Compares two boards and whether they are the same or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+{\em board} & The board of the game \\
+\hline
+{\em prev\+Board} & The previous board of the game, before updates Compares 2 tables, previous and current and if they are the same returns 0 to stop the while loop in begin function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tests_8c_af76ccdadf110d979eb30afa5854419d7}\label{tests_8c_af76ccdadf110d979eb30afa5854419d7}} 
+\index{tests.c@{tests.c}!count@{count}}
+\index{count@{count}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily int count (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{char $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+The functions seen in \mbox{\hyperlink{life_8h}{life.\+h}}. 
+
+Counts the number of live cells around the current given cell. \mbox{\Hypertarget{tests_8c_ac5de8bb1632100fd4893f5b44cccba20}\label{tests_8c_ac5de8bb1632100fd4893f5b44cccba20}} 
+\index{tests.c@{tests.c}!createBoard@{createBoard}}
+\index{createBoard@{createBoard}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{createBoard()}{createBoard()}}
+{\footnotesize\ttfamily char$\ast$ create\+Board (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns }\end{DoxyParamCaption})}
+
+
+
+Creates a board at the start. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tests_8c_a00e65ebfa112557b2ad3cf7c39c7cede}\label{tests_8c_a00e65ebfa112557b2ad3cf7c39c7cede}} 
+\index{tests.c@{tests.c}!display@{display}}
+\index{display@{display}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{char $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Displays the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+{\em Board} & The game board Displays the board on the terminal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tests_8c_af29a83e7117d86a4c79303ce09743f5c}\label{tests_8c_af29a83e7117d86a4c79303ce09743f5c}} 
+\index{tests.c@{tests.c}!getRandomValue@{getRandomValue}}
+\index{getRandomValue@{getRandomValue}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{getRandomValue()}{getRandomValue()}}
+{\footnotesize\ttfamily double get\+Random\+Value (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max }\end{DoxyParamCaption})}
+
+
+
+Returns a random double between min and max given by the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Lower bound of the interval \\
+\hline
+{\em max} & Upper bound of the interval To randomize the placement of the hashes on the initial table, so that the game of life could start A standard random value expression was used, nothing too special \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tests_8c_a11244ab0910e8dbcdf132f10630dea91}\label{tests_8c_a11244ab0910e8dbcdf132f10630dea91}} 
+\index{tests.c@{tests.c}!init\_suite@{init\_suite}}
+\index{init\_suite@{init\_suite}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{init\_suite()}{init\_suite()}}
+{\footnotesize\ttfamily int init\+\_\+suite (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializing the test suit and the cleaner functions. 
+
+\mbox{\Hypertarget{tests_8c_afa47b5596386bb4627c11396dc296120}\label{tests_8c_afa47b5596386bb4627c11396dc296120}} 
+\index{tests.c@{tests.c}!isNotEmpty@{isNotEmpty}}
+\index{isNotEmpty@{isNotEmpty}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{isNotEmpty()}{isNotEmpty()}}
+{\footnotesize\ttfamily int is\+Not\+Empty (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{char $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Checks whether the board has only dead cells or there\textquotesingle{}s at least one live cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows on the board \\
+\hline
+{\em columns} & The number of columns on the board \\
+\hline
+{\em board} & The board of the game A function to check whether the table is filled with only dead cells or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tests_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{tests_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{tests.c@{tests.c}!main@{main}}
+\index{main@{main}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The main function which triggers the testing \mbox{\Hypertarget{tests_8c_a441738d0fb472e514d9baa16548c83e4}\label{tests_8c_a441738d0fb472e514d9baa16548c83e4}} 
+\index{tests.c@{tests.c}!nextBoard@{nextBoard}}
+\index{nextBoard@{nextBoard}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{nextBoard()}{nextBoard()}}
+{\footnotesize\ttfamily char$\ast$ next\+Board (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{columns,  }\item[{char $\ast$}]{prev\+Board }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tests_8c_a190e9cf236c0b72ee9025ed06030b101}\label{tests_8c_a190e9cf236c0b72ee9025ed06030b101}} 
+\index{tests.c@{tests.c}!testCompareBoards@{testCompareBoards}}
+\index{testCompareBoards@{testCompareBoards}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{testCompareBoards()}{testCompareBoards()}}
+{\footnotesize\ttfamily void test\+Compare\+Boards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Testing compare\+Boards and whether it truthfully compares 2 empty boards or not \mbox{\Hypertarget{tests_8c_abaa94e14a64470135cecf54483e300e0}\label{tests_8c_abaa94e14a64470135cecf54483e300e0}} 
+\index{tests.c@{tests.c}!testCount@{testCount}}
+\index{testCount@{testCount}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{testCount()}{testCount()}}
+{\footnotesize\ttfamily void test\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Testing count and whether it returns truthful values for board full of living cells \mbox{\Hypertarget{tests_8c_a0dc4c4586e1a48d47ba2b95f5ecd771e}\label{tests_8c_a0dc4c4586e1a48d47ba2b95f5ecd771e}} 
+\index{tests.c@{tests.c}!testCreate@{testCreate}}
+\index{testCreate@{testCreate}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{testCreate()}{testCreate()}}
+{\footnotesize\ttfamily void test\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Testing the create\+Board function and whether it creates a new board or just returns a N\+U\+LL pointer \mbox{\Hypertarget{tests_8c_a47157631eff227b44fb7bb87fb2de2df}\label{tests_8c_a47157631eff227b44fb7bb87fb2de2df}} 
+\index{tests.c@{tests.c}!testGetRandomValue@{testGetRandomValue}}
+\index{testGetRandomValue@{testGetRandomValue}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{testGetRandomValue()}{testGetRandomValue()}}
+{\footnotesize\ttfamily void test\+Get\+Random\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here we need to check the values that the function returns, they should be truthful these should be between 0 and 1 We have many tests to test the randomizer \mbox{\Hypertarget{tests_8c_a8c2d85b1dc5424545f9f4cd750cecb94}\label{tests_8c_a8c2d85b1dc5424545f9f4cd750cecb94}} 
+\index{tests.c@{tests.c}!testIsNotEmpty@{testIsNotEmpty}}
+\index{testIsNotEmpty@{testIsNotEmpty}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{testIsNotEmpty()}{testIsNotEmpty()}}
+{\footnotesize\ttfamily void test\+Is\+Not\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Testing is\+Not\+Empty and whether or not it returns truthful values for both full and empty boards \mbox{\Hypertarget{tests_8c_afd292d326502c8a486b6eafb6111a814}\label{tests_8c_afd292d326502c8a486b6eafb6111a814}} 
+\index{tests.c@{tests.c}!testNextBoard@{testNextBoard}}
+\index{testNextBoard@{testNextBoard}!tests.c@{tests.c}}
+\doxysubsubsection{\texorpdfstring{testNextBoard()}{testNextBoard()}}
+{\footnotesize\ttfamily void test\+Next\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Testing the next\+Board function and whether it creates a new board out of the previous one or just returns a N\+U\+LL pointer 
