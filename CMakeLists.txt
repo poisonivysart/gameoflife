@@ -1,22 +1,11 @@
 cmake_minimum_required(VERSION 3.20.3)
-INCLUDE(FindPackageHandleStandardArgs) 
-set(CMAKE_INSTALL_PREFIX "CUnit/CUnit.h")  
-
-# set(CUnit)
-# find_path(CUNIT_INCLUDE_DIR NAMES CUnit/CUnit.h)
-# find_library(CUNIT_LIBRARY NAMES cunit)
-# find_package_handle_standard_args(CUnit DEFAULT_MSG CUNIT_LIBRARY CUNIT_INCLUDE_DIR)
-# find_package(CUnit REQUIRED)
 
 project(GAMEOFLIFE)
-
-# find_package(SDL2 REQUIRED)
 
 # tell CMake to use CTest extension
 # CMAKE_INSTALL_PREFIX = "SDL2"
 
 add_executable(${PROJECT_NAME} main.c)
-
 
 add_subdirectory(game)
 target_link_libraries(${PROJECT_NAME} life)
@@ -27,6 +16,7 @@ target_link_libraries(${PROJECT_NAME} board)
 enable_testing()
 # now register the executable with CTest
 add_executable(my_test tests/tests.c)
+
 target_link_libraries(my_test cunit)
 # set_target_properties (my_test PROPERTIES LINK_FLAGS -Wl,-lcunit)  
 add_test(NAME my_test COMMAND my_test)
