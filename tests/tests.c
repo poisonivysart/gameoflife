@@ -9,6 +9,7 @@
 #include <CUnit/Basic.h>	  // Basic interface with non-interactive output to stdout.
 #include <CUnit/Console.h>	// Interactive console interface.
 
+// I define the default rows and columns here
 #define ROWS 7
 #define COLUMNS 8
 
