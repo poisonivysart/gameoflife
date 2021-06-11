@@ -1,44 +1,32 @@
-// #include "board.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <SDL2/SDL.h>
 
-#define ROWS 5
-#define COLUMNS 10
+/**
+ * @file doxygen_c.h
+ * @author My Self
+ * @date 9 Sep 2012
+ * @brief File containing example of doxygen usage for quick reference.
+ *
+ * Here typically goes a more extensive explanation of what the header
+ * defines. Doxygens tags are words preceeded by either a backslash @\
+ * or by an at symbol @@.
+ * @see http://www.stack.nl/~dimitri/doxygen/docblocks.html
+ * @see http://www.stack.nl/~dimitri/doxygen/commands.html
+ */
 
-// // for initializing and sutdown functions
-// #include <SDL2/SDL.h>
- 
-// // for rendering images and graphics on screen
-// #include <SDL2/SDL_image.h>
- 
-// // for using SDL_Delay() functions
-// #include <SDL2/SDL_timer.h>
 
-// int sdl_setup(){
-//   if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-//         printf("error initializing SDL: %s\n", SDL_GetError());
-//   }
-//   SDL_Window* win = SDL_CreateWindow("GAME OF LIFE",
-//                                        SDL_WINDOWPOS_CENTERED,
-//                                        SDL_WINDOWPOS_CENTERED,
-//                                        1000, 1000, 0);
-    // while (1);
-// }
 int main(){
- // retutns zero on success else non-zero
-    // SDL_SetMainReady();
-  if (SDL_Init(SDL_INIT_EVERYTHING) < 0){
-		printf("SDL could not initialize!\n",SDL_GetError());
-		return -1;
-	}
-
-  // if game craches close the window
-  atexit(SDL_Quit);
 
   srand(time(NULL));
-  begin(ROWS+2,COLUMNS+2);
+  int rows, columns;
+  printf("Enter the number of rows and columns respectively (space between): ");
+  scanf("%d%d", &rows, &columns);
+
+  // we add those 2 extra columsn and rows for the wrapper around the board. 
+  // because during calculations it will be needed, so that they don't go
+  // out of border and we don't get an error
+  begin(rows+2,columns+2);
   
   return 0;
 }

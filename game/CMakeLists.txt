@@ -1,1 +1,1 @@
-add_library(board board.c)
+add_library(life life.c)

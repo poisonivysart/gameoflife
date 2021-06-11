@@ -1,0 +1,14 @@
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles/edit_cache.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles/test.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles/rebuild_cache.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles/doc_doxygen.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles/my_test.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/CMakeFiles/GAMEOFLIFE.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/game/CMakeFiles/rebuild_cache.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/game/CMakeFiles/edit_cache.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/game/CMakeFiles/life.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/game/CMakeFiles/test.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console/CMakeFiles/rebuild_cache.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console/CMakeFiles/edit_cache.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console/CMakeFiles/board.dir
+/home/poisonivysart/Documents/L2/S2/CS_DevTech/ImprovedGameOfLife/build/console/CMakeFiles/test.dir
