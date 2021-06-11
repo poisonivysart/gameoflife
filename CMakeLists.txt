@@ -5,6 +5,7 @@ project(GAMEOFLIFE)
 find_package(SDL2 REQUIRED)
 
 # tell CMake to use CTest extension
+CMAKE_INSTALL_PREFIX = "SDL2"
 enable_testing()
 
 # now register the executable with CTest
